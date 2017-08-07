@@ -22,5 +22,8 @@ urlpatterns = [
     url(r'^$', blog_views.post_list, name='blog_post_list'),
     url(r'^post/(?P<pk>[0-9]+)/$', blog_views.post_detail, name='blog_post_detail'),
     url(r'^post/new/$', blog_views.post_new, name='blog_post_new'),
-    url(r'^post/(?P<pk>[0-9]+)/edit/$', blog_views.post_edit, name='blog_post_edit')
+    url(r'^post/(?P<pk>[0-9]+)/edit/$', blog_views.post_edit, name='blog_post_edit'),
+    url(r'^drafts/$', blog_views.post_draft_list, name='post_draft_list'),
+    url(r'^post/(?P<pk>[0-9]+)/publish/$', blog_views.post_publish, name='blog_post_publish'),
+    url(r'^post/(?P<pk>[0-9]+)/remove/$', blog_views.post_remove, name='blog_post_remove')
 ]

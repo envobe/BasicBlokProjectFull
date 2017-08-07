@@ -21,7 +21,12 @@
 </head>
 <body class="customize-support">
     <div class="page-header">
-        <a href="{% url 'blog_post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></a>
+        <a href="{% url 'blog_post_new' %}" class="top-menu">
+            <span class="glyphicon glyphicon-plus"></span>
+        </a>
+        <a href="{% url 'post_draft_list' %}" class="top-menu">
+            <span class="glyphicon glyphicon-edit"></span>
+        </a>
         <h1><a href="{% url 'blog_post_list' %}">Simple Django Blog</a></h1>
     </div>
     <div class="row">
