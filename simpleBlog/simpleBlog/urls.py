@@ -21,4 +21,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', blog_views.post_list, name='blog_post_list'),
     url(r'^post/(?P<pk>[0-9]+)/$', blog_views.post_detail, name='blog_post_detail'),
+    url(r'^post/new/$', blog_views.post_new, name='blog_post_new'),
+    url(r'^post/(?P<pk>[0-9]+)/edit/$', blog_views.post_edit, name='blog_post_edit')
 ]
