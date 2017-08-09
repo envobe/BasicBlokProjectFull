@@ -1,0 +1,38 @@
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
+    <!-- Blog CSS-->
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'syntaxhighlighter/styles/shCoreDefault.css' %}"/>
+    <script type="text/javascript" src="{% static 'syntaxhighlighter/scripts/shCore.js' %}"></script>
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+    <script src="{% static 'js/base.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    {% block header %}
+    {% endblock %}
+    <title>这是一个简单的django博客</title>
+</head>
+<body class="customize-support">
+    <div class="page-header">
+        <a href="{% url 'blog_post_new' %}" class="top-menu">
+            <span class="glyphicon glyphicon-plus"></span>
+        </a>
+        <a href="{% url 'post_draft_list' %}" class="top-menu">
+            <span class="glyphicon glyphicon-edit"></span>
+        </a>
+        <h1><a href="{% url 'blog_post_list' %}">简易django BLog</a></h1>
+    </div>
+    <div id="navigation">
+
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
